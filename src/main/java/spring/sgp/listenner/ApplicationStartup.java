@@ -40,13 +40,12 @@ public class ApplicationStartup implements ApplicationListener<ApplicationReadyE
 		departementRepository.save(departements);
 		// creation Banque
 		Banque banque1 = new Banque();
-
 		banque1.setNomBanque("Société Générale");
-		
 		banque1.setBic("SOGEFRPP");
 		banque1.setIban("IBAN 2006 3053 3309");
 		// creation collab
-		Collaborateur collab1 = new Collaborateur("Dupont", "Jean-Jacques");
+		Collaborateur collab1 = new Collaborateur("Johny", "MAGRE");
+		collab1.setMatricule("M001");
 		collab1.setAdresse("2 rue de la Paix, 75000 Paris");
 		collab1.setBanque(banque1);
 		collab1.setDepartement(dept1);
@@ -59,7 +58,8 @@ public class ApplicationStartup implements ApplicationListener<ApplicationReadyE
 		banque2.setNomBanque("LCL");
 		banque2.setBic("LCLFRPP");
 		banque2.setIban("IBAN 2006 3053 4452");
-		Collaborateur collab2 = new Collaborateur("Ricard", "Daniel");
+		Collaborateur collab2 = new Collaborateur("Laurent", "Natale");
+		collab2.setMatricule("M002");
 		collab2.setAdresse("2 rue de la Soif, Rennes");
 		collab2.setBanque(banque2);
 		collab2.setDepartement(dept2);
